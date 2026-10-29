@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --bg-vellum: #F4F0E8;
+  --bg-surface: #EBE6DC;
+  --bg-card: #FFFFFF;
+  --text-ink: #171717;
+  --text-muted: #5C5549;
+  --accent-vermilion: #BA290F;
+  --accent-vermilion-tint: #FF6B50;
+  --accent-vermilion-soft: rgba(186, 41, 15, 0.08);
+  --border-subtle: rgba(23, 23, 23, 0.12);
+  --border-strong: rgba(23, 23, 23, 0.28);
+}
+
+@theme inline {
+  --color-vellum: var(--bg-vellum);
+  --color-surface: var(--bg-surface);
+  --color-card: var(--bg-card);
+  --color-ink: var(--text-ink);
+  --color-muted: var(--text-muted);
+  --color-vermilion: var(--accent-vermilion);
+  --color-vermilion-tint: var(--accent-vermilion-tint);
+  --font-display: var(--font-instrument-serif), Georgia, Cambria, serif;
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background-color: var(--bg-vellum);
+  color: var(--text-ink);
+}
+
+body {
+  background-color: var(--bg-vellum);
+  color: var(--text-ink);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial rule lines */
+.rule-subtle {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.rule-strong {
+  border-bottom: 1px solid var(--border-strong);
+}
+
+/* Custom focus styles for strict accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent-vermilion);
+  outline-offset: 3px;
+}
+
+/* Interactive link transitions */
+a {
+  text-underline-offset: 4px;
+}
+
+/* Selection aesthetics */
+::selection {
+  background-color: var(--accent-vermilion);
+  color: #FFFFFF;
+}
