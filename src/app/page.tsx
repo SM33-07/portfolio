@@ -1,16 +1,22 @@
-import { TopBar } from "@/components/TopBar";
-import { Hero } from "@/components/Hero";
-import { ChapterNavigation } from "@/components/ChapterNavigation";
-import { WorkSection } from "@/components/WorkSection";
+import TopBar from "@/components/TopBar";
+import ChapterNavigation from "@/components/ChapterNavigation";
+import Hero from "@/components/Hero";
+import WorkSection from "@/components/WorkSection";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
+import ContactSection from "@/components/ContactSection";
 
-export default function HomePage() {
+export default function Home() {
   return (
     <>
       <TopBar />
-      <main id="main-content" className="flex-1">
+      <ChapterNavigation />
+      <main className="flex-1">
         <Hero />
-        <ChapterNavigation />
         <WorkSection />
+        <AboutSection />
+        <SkillsSection />
+        <ContactSection />
       </main>
     </>
   );
